@@ -1,4 +1,4 @@
-# PRINTED VOICE: BLOCO DE DIGITAÇÃO POR VOZ PARA O AVA MOODLE
+## PRINTED VOICE: BLOCO DE DIGITAÇÃO POR VOZ PARA O AVA MOODLE
 
 ## Trabalho de Conclusão de Curso (TCC)
 
@@ -19,6 +19,6 @@ O bloco Printed Voice visa facilitar a comunicação e a interação de pessoas 
 
 ## Processamento de Linguagem Natural
 
-    O Processamento de Linguagem Natural (PLN) é um campo da inteligência artificial que se concentra na interação entre computadores e a linguagem humana. Ele abrange uma variedade de técnicas e abordagens que permitem aos computadores compreender, interpretar e gerar texto e fala de maneira semelhante aos seres humanos.
+O Processamento de Linguagem Natural (PLN) é um campo da inteligência artificial que se concentra na interação entre computadores e a linguagem humana. Ele abrange uma variedade de técnicas e abordagens que permitem aos computadores compreender, interpretar e gerar texto e fala de maneira semelhante aos seres humanos.
 
 
