@@ -1,0 +1,71 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea class="campo-textarea" id="textArea" cols="50" rows="10" placeholder="Fale alguma coisa..."></textarea>
+<div class="botoes">
+    <button class="botao-home" id="startRecording">Iniciar Gravação</button>
+    <button class="botao-home" id="stopRecording" disabled>Parar Gravação</button>
+</div>
+
+<form method="post" action="">
+    {% csrf_token %}
+    <input type="hidden" name="text" id="hiddenText">
+    <button type="submit" class="botao-home" download>Download DOCX</button>
+</form>
+
+<form method="post" action="">
+    {% csrf_token %}
+    <input type="hidden" name="text" id="hiddenTextPDF">
+    <button type="submit" class="botao-home" download>Download PDF</button>
+</form>
+
+<script>
+    const startButton = document.getElementById('startRecording');
+    const stopButton = document.getElementById('stopRecording');
+    const textArea = document.getElementById('textArea');
+    let recognition;
+
+    if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
+        recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+        recognition.continuous = true;
+
+        recognition.onstart = () => {
+            startButton.disabled = true;
+            stopButton.disabled = false;
+            textArea.value = '';
+        };
+
+        recognition.onresult = (event) => {
+            const transcript = event.results[event.results.length - 1][0].transcript;
+            textArea.value = transcript;
+            document.getElementById('hiddenText').value = transcript;  // Atribuir ao campo oculto
+            document.getElementById('hiddenTextPDF').value = transcript;  // Atribuir ao campo oculto
+        };
+
+        recognition.onerror = (event) => {
+            console.error('Erro na gravação:', event.error);
+        };
+
+        recognition.onend = () => {
+            startButton.disabled = false;
+            stopButton.disabled = true;
+        };
+
+        startButton.addEventListener('click', () => {
+            recognition.start();
+        });
+
+        stopButton.addEventListener('click', () => {
+            recognition.stop();
+        });
+    } else {
+        console.error('A API de reconhecimento de fala não é suportada neste navegador.');
+    }
+</script>
+</body>
+</html> -->
